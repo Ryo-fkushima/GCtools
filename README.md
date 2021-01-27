@@ -1,8 +1,6 @@
 # **GCtools**
-*for metamorphic petrologists*
 
-This is a viable tool for geochemistry.
-
+This is a set of viable tools for geochemistry.
 
 ## Features
 
