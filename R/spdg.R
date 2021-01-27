@@ -2,10 +2,14 @@
 
 ########## Parameters ##########
 #elist <- c("La","Ce","Pr","Nd","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu")## elements of interest
-elist <- c("Cs","Rb","Ba","Th","U","Nb","K","La","Ce","Pb","Pr","Sr","P","Nd","Zr","Sm","Eu","Ti","Dy","Y","Yb","Lu")## elements of interest
-s <- external## compositional matrix of a natural sample (dataframe) (ppm)
-nml <- "PM_MS95"## "NMORB_SM89", "EMORB_SM89", "OIB_SM89", "CI_MS95", "PM_MS95"
-output <- T
+#elist <- c("Cs","Rb","Ba","Th","U","Nb","K","La","Ce","Pb","Pr","Sr","P","Nd","Zr","Sm","Eu","Ti","Dy","Y","Yb","Lu")## elements of interest
+#s <- external## compositional matrix of a natural sample (dataframe) (ppm)
+#nml <- "PM_MS95"## "NMORB_SM89", "EMORB_SM89", "OIB_SM89", "CI_MS95", "PM_MS95"
+#output <- T
+
+
+spdg <- function(elist, s, nml, output){
+
 
 ########## Warning ##########
 if(ncol(s) >= 8){
@@ -99,4 +103,4 @@ for(i in 1:ncol(plotdata)){
 ########## Data output ##########
 if(output ==T){write.table(plotdata, file = "output.txt")}
 
-
+}

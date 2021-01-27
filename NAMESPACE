@@ -1,1 +1,4 @@
 exportPattern("^[[:alpha:]]+")
+importFrom("grDevices", "rainbow")
+importFrom("graphics", "abline", "axis", "lines")
+importFrom("utils", "write.table")

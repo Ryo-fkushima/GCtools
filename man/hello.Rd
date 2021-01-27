@@ -8,5 +8,5 @@ hello()
 Prints 'Hello, world!'.
 }
 \examples{
-hello()
+spdg(elist = c("Cs","Rb","Ba","Th","U","Nb","K","La","Ce","Pb","Pr","Sr","P","Nd","Zr","Sm","Eu","Ti","Dy","Y","Yb","Lu"), s = external, nml = "CI_MS95", output = F)
 }
