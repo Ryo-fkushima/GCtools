@@ -6,7 +6,7 @@
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-"spdg" is a useful function for geochemists to draw spider diagrams of trace/REE elements. This function allows us to extract only which kinds of elements you need and to plot their concentrations.
+"spdg" is a useful function to draw spider diagrams of trace/REE elements. This function allows us to extract only which kinds of elements you need from your dataset, and to plot their concentrations.
 }
 \usage{
 spdg(elist, s, nml, output)
@@ -41,12 +41,19 @@ Ryo Fukushima
 
 \note{
 %%  ~~further notes~~
+> This function works well even if the dataset ("s") includes NA values and/or undefined elemental names (e.g., SiO2, MgO, etc.), and/or even if the dataset lacks elemental names which are defined in the "elist" vector.
+
+> Even if you set a dataset for many samples, this function can process it. However, as we have prepared only 10 colors and 2 line types, too many sample data would be indistinguishable on the plot.
+
+> If you already have "output.txt" in the working directory, this function overwrites it when output = TRUE. The output file can be readily read with the read.table() function. Note that the output file does not contain any information about the reference dataset which was used for the normalization.
 
 }
 
 \references{
 %% ~put references to the literature/web site here ~
+Sun SS, McDonough WF (1989) Chemical and isotopic systematics of oceanic basalts: implications for mantle composition and processes. Geological Society, London, Special Publications, 42:313-345
 
+McDonough WF, Sun SS (1995) The composition of the Earth. Chemical geology, 120:223-253
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -61,5 +68,6 @@ nml = "CI_MS95", output = FALSE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
+\keyword{incompatible element}
 \keyword{REE}% use one of  RShowDoc("KEYWORDS")
 \keyword{spider diagram}% __ONLY ONE__ keyword per line
