@@ -1,15 +1,15 @@
-\name{spdg}
-\alias{spdg}
+\name{simplespider}
+\alias{simplespider}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{spdg: spider diagram generator
+\title{simplespider: spider diagram generator (for already sorted data)
 %%  ~~function to do ... ~~
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-"spdg" is a useful function for geochemists to draw spider diagrams of trace-elements.
+"simplespider" is a useful function for geochemists to draw spider diagrams of trace-elements.
 }
 \usage{
-spdg(elist, s, nml, output)
+simplespider(s, ymin, ymax, output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -47,9 +47,7 @@ Ryo Fukushima
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
-spdg(elist = c("Cs","Rb","Ba","Th","U","Nb","K","La","Ce","Pb","Pr","Sr","P",
-"Nd","Zr","Sm","Eu","Ti","Dy","Y","Yb","Lu"), s = example_data_GCtools,
-nml = "CI_MS95", output = FALSE)
+simplespider(s, ymin, ymax, output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
