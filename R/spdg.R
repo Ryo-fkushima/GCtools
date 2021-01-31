@@ -107,7 +107,7 @@ for(i in 1:ncol(plotdata)){
     if(i == 10){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "pink \n")}
   }
   if(i > 10 && i <= 20){
-    lines(plotdata[,i], type = "b", pch = 20, lty=2, col= color_list[i])
+    lines(plotdata[,i], type = "b", pch = 20, lty=2, col= color_list[(i - 10)])
     if(i == 11){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "black (dashed)\n")}
     if(i == 12){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "red (dashed)\n")}
     if(i == 13){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "blue (dashed)\n")}

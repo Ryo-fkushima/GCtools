@@ -38,7 +38,7 @@ for(i in 1:ncol(s)){
     if(i == 10){cat("Sample",i,"(",colnames(s)[i],")",":", "pink \n")}
   }
   if(i > 10 && i <= 20){
-    lines(s[,i], type = "b", pch = 20, lty=2, col= color_list[i])
+    lines(s[,i], type = "b", pch = 20, lty=2, col= color_list[(i - 10)])
     if(i == 11){cat("Sample",i,"(",colnames(s)[i],")",":", "black (dashed)\n")}
     if(i == 12){cat("Sample",i,"(",colnames(s)[i],")",":", "red (dashed)\n")}
     if(i == 13){cat("Sample",i,"(",colnames(s)[i],")",":", "blue (dashed)\n")}
