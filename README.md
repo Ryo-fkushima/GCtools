@@ -3,6 +3,7 @@
 This is a set of viable tools for geochemistry.
 
 ## Features
+This package includes two functions for plotting rare earth element (REE) concentrations normalized by various types of mantle/chondritic values. ALl you have to do is: 1) prepare a compositional dataframe; 2) choose elements for making plots; and 3) choose the appropriate type of the reference values.
 
 ## Requirement
 R 4.0.2

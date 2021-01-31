@@ -9,7 +9,7 @@
 "simplespider" is a useful function for geochemists to draw spider diagrams of trace-elements.
 }
 \usage{
-simplespider(s = example2_data_GCtools, ymin = 0.1, ymax = 1000, output = FALSE)
+simplespider(s, ymin, ymax, output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -47,7 +47,7 @@ Ryo Fukushima
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
-simplespider(s, ymin, ymax, output)
+simplespider(s = example2_data_GCtools, ymin = 0.1, ymax = 1000, output = FALSE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
