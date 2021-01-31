@@ -26,16 +26,16 @@ color_list <- c("black","red","blue","forestgreen","gold","darkviolet","darkoran
 for(i in 1:ncol(s)){
   if(i <= 10){
     lines(s[,i], type = "b", pch = 20, lty=1, col= color_list[i])
-    if(i == 1){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "black \n")}
-    if(i == 2){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "red \n")}
-    if(i == 3){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "blue \n")}
-    if(i == 4){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "green \n")}
-    if(i == 5){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "yellow \n")}
-    if(i == 6){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "violet \n")}
-    if(i == 7){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "orange \n")}
-    if(i == 8){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "skyblue \n")}
-    if(i == 9){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "brown \n")}
-    if(i == 10){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "pink \n")}
+    if(i == 1){cat("Sample",i,"(",colnames(s)[i],")",":", "black \n")}
+    if(i == 2){cat("Sample",i,"(",colnames(s)[i],")",":", "red \n")}
+    if(i == 3){cat("Sample",i,"(",colnames(s)[i],")",":", "blue \n")}
+    if(i == 4){cat("Sample",i,"(",colnames(s)[i],")",":", "green \n")}
+    if(i == 5){cat("Sample",i,"(",colnames(s)[i],")",":", "yellow \n")}
+    if(i == 6){cat("Sample",i,"(",colnames(s)[i],")",":", "violet \n")}
+    if(i == 7){cat("Sample",i,"(",colnames(s)[i],")",":", "orange \n")}
+    if(i == 8){cat("Sample",i,"(",colnames(s)[i],")",":", "skyblue \n")}
+    if(i == 9){cat("Sample",i,"(",colnames(s)[i],")",":", "brown \n")}
+    if(i == 10){cat("Sample",i,"(",colnames(s)[i],")",":", "pink \n")}
   }
   if(i > 10 && i <= 20){
     lines(s[,i], type = "b", pch = 20, lty=2, col= color_list[i])
