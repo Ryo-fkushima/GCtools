@@ -9,7 +9,7 @@
 "simplespider" is a useful function for geochemists to draw spider diagrams of trace-elements.
 }
 \usage{
-simplespider(s, ymin, ymax, output)
+simplespider(s = example2_data_GCtools, ymin = 0.1, ymax = 1000, output = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
