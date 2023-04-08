@@ -9,16 +9,17 @@
 "spdg" is a useful function to draw spider diagrams of trace/REE elements. This function allows us to extract only which kinds of elements you need from your dataset, and to plot their concentrations.
 }
 \usage{
-spdg(elist, s, nml, output)
+spdg(elist, s, nml, plottype, output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
 \item{elist}{a vector which determines which kinds/order of elements you would like to adopt. You cannot set values other than "Cs", "Tl", "Rb", "Ba", "W", "Th", "U", "Nb", "Ta", "K", "La", "Ce", "Pb", "Pr", "Mo", "Sr", "P", "Nd", "F", "Sm", "Zr", "Hf", "Eu", "Sn", "Sb", "Ti", "Gd", "Tb", "Dy", "Li", "Y", "Ho", "Er", "Tm", "Yb", and "Lu". This is because the reference values, by which we normalize the sample data, consist only of concentrations of these elements.
 }
-\item{s}{a compositional dataframe. The first column should be a vector of elemental names, and the other columns should be their concentrations in your samples. You had better name each of the columns (i.e., each of the samples).
+\item{s}{a compositional dataframe. The first column should be a vector of elemental names, and the other columns should be their concentrations (ppm) in your samples. It is recommended to name each of the columns (i.e., each of the samples).
 }
 \item{nml}{a name of the reference dataset you would like to use: "NMORB_SM89", "EMORB_SM89", and "OIB_SM89": N-MORB, E-MORB, and OIB values (Sun and McDonough, 1989); "CI_MS95", "PM_MS95": chondritic and pyrolite mantle values (McDonough and Sun, 1995).
 }
+\item{plottype}{the type of line plots. You can choose from "l", "o", "b", etc.}
 \item{output}{If output = TRUE, you can obtain a text file which includes the final dataset used for the plot in the working directory.
 }
 
@@ -64,7 +65,7 @@ McDonough WF, Sun SS (1995) The composition of the Earth. Chemical geology, 120:
 \examples{
 spdg(elist = c("Cs","Rb","Ba","Th","U","Nb","K","La","Ce","Pb","Pr","Sr","P",
 "Nd","Zr","Sm","Eu","Ti","Dy","Y","Yb","Lu"), s = example_data_GCtools,
-nml = "CI_MS95", output = FALSE)
+nml = "CI_MS95", plottype = "o", output = FALSE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

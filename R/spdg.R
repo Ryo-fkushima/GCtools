@@ -8,7 +8,7 @@
 #output <- F
 
 
-spdg <- function(elist, s, nml, output){
+spdg <- function(elist, s, nml, plottype, output){
 
 
 ########## Warning ##########
@@ -94,7 +94,7 @@ color_list <- c("black","red","blue","forestgreen","gold","darkviolet","darkoran
 
 for(i in 1:ncol(plotdata)){
   if(i <= 10){
-    lines(plotdata[,i], type = "b", pch = 20, lty=1, col= color_list[i])
+    lines(plotdata[,i], type = plottype, pch = 20, lty=1, col= color_list[i])
     if(i == 1){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "black \n")}
     if(i == 2){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "red \n")}
     if(i == 3){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "blue \n")}
@@ -107,7 +107,7 @@ for(i in 1:ncol(plotdata)){
     if(i == 10){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "pink \n")}
   }
   if(i > 10 && i <= 20){
-    lines(plotdata[,i], type = "b", pch = 20, lty=2, col= color_list[(i - 10)])
+    lines(plotdata[,i], type = plottype, pch = 20, lty=2, col= color_list[(i - 10)])
     if(i == 11){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "black (dashed)\n")}
     if(i == 12){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "red (dashed)\n")}
     if(i == 13){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "blue (dashed)\n")}
@@ -120,7 +120,7 @@ for(i in 1:ncol(plotdata)){
     if(i == 20){cat("Sample",i,"(",colnames(s)[i + 1],")",":", "pink (dashed)\n")}
   }
   if(i > 20){
-    lines(plotdata[,i], type = "b", pch = 20, col= "grey60")
+    lines(plotdata[,i], type = plottype, pch = 20, col= "grey60")
     cat("Sample",i,"(",colnames(s)[i + 1],")",":", "gray \n")
   }
 

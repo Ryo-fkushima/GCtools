@@ -8,7 +8,7 @@
 #output <- F
 
 
-simplespider <- function(s, ymin, ymax, output){
+simplespider <- function(s, ymin, ymax, plottype, output){
 
 if(ncol(s) >= 21){
    cat("Warning: TOO MANY SAMPLES!! \n")
@@ -25,7 +25,7 @@ color_list <- c("black","red","blue","forestgreen","gold","darkviolet","darkoran
 
 for(i in 1:ncol(s)){
   if(i <= 10){
-    lines(s[,i], type = "b", pch = 20, lty=1, col= color_list[i])
+    lines(s[,i], type = plottype, pch = 20, lty=1, col= color_list[i])
     if(i == 1){cat("Sample",i,"(",colnames(s)[i],")",":", "black \n")}
     if(i == 2){cat("Sample",i,"(",colnames(s)[i],")",":", "red \n")}
     if(i == 3){cat("Sample",i,"(",colnames(s)[i],")",":", "blue \n")}
@@ -38,7 +38,7 @@ for(i in 1:ncol(s)){
     if(i == 10){cat("Sample",i,"(",colnames(s)[i],")",":", "pink \n")}
   }
   if(i > 10 && i <= 20){
-    lines(s[,i], type = "b", pch = 20, lty=2, col= color_list[(i - 10)])
+    lines(s[,i], type = plottype, pch = 20, lty=2, col= color_list[(i - 10)])
     if(i == 11){cat("Sample",i,"(",colnames(s)[i],")",":", "black (dashed)\n")}
     if(i == 12){cat("Sample",i,"(",colnames(s)[i],")",":", "red (dashed)\n")}
     if(i == 13){cat("Sample",i,"(",colnames(s)[i],")",":", "blue (dashed)\n")}
@@ -51,7 +51,7 @@ for(i in 1:ncol(s)){
     if(i == 20){cat("Sample",i,"(",colnames(s)[i],")",":", "pink (dashed)\n")}
   }
   if(i > 20){
-    lines(s[,i], type = "b", pch = 20, col= "grey60")
+    lines(s[,i], type = plottype, pch = 20, col= "grey60")
     cat("Sample",i,"(",colnames(s)[i + 1],")",":", "gray \n")
   }
 
